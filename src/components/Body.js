@@ -6,7 +6,7 @@ const Body = () => {
         <div className="resContainer">
             {
                 restaurants.map((restaurant) => (
-                    <ResCard key = {restaurant.info.id} resData = {restaurant}/>
+                    <ResCard key = {restaurant.data.id} resData = {restaurant}/>
                 ))
             }
         </div>
