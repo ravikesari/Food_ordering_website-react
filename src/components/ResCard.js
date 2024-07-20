@@ -1,6 +1,8 @@
+import { dataPath } from "../utiles/utiles";
+
 const ResCard = (props) => {
     const { resData } = props;
-    const{cloudinaryImageId,name,areaName,costForTwoString,cuisines,avgRating} = resData?.data;
+    const{cloudinaryImageId,name,areaName,costForTwoString,cuisines,avgRating} = resData?.info;
     return (
         <div className="resCard">
             <div className="resLogo">
