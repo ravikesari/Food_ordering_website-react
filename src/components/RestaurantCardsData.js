@@ -1,4 +1,4 @@
-const restaurants = [
+let restaurants = [
     {
       type: 'restaurant',
       data: {
