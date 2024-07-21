@@ -1,9 +1,14 @@
+import { useState } from "react";
+
 const Header = () => {
+
+    const [btnName, setBtnName] = useState("Login")
+
     return (
         <div className="header">
             <div className="logo-container">
                 <img className="logo"
-                    src="https://png.pngtree.com/template/20191024/ourmid/pngtree-food-delivery-logo-design-fast-delivery-service-sign-image_323015.jpg" 
+                    src="https://png.pngtree.com/template/20191024/ourmid/pngtree-food-delivery-logo-design-fast-delivery-service-sign-image_323015.jpg"
                 />
             </div>
             <div className="navItems">
@@ -12,6 +17,9 @@ const Header = () => {
                     <li>About Us</li>
                     <li>Contact us</li>
                     <li>Cart</li>
+                    <button className="logButton" onClick={() => {
+                        btnName === "Login" ? setBtnName("Logout") : setBtnName("Login") 
+                    }}>{btnName}</button>
                 </ul>
             </div>
         </div>

@@ -23,12 +23,14 @@
 }
 .navItems > ul > li{
     margin-right: 100px;
+    align-self: center;
+    font-size: 18px;
 }
 
 .resContainer{
     display: flex;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 20px 50px;
 }
 .resCard{
     /* height: auto; */
@@ -51,8 +53,10 @@
 }
 
 .filter{
-    margin: 30px 0px 0px 50px;
-    
+    margin: 30px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 60px;
 }
 .filter-btn{
     background-color: rgb(32, 181, 49);
@@ -75,4 +79,30 @@
     width: 260px;
     margin: 10px;
     background-color: #f0f0f0;
+}
+
+.logButton{
+    width: 100px;
+    height: 35px;
+    padding: 0px 10px;
+    margin-right: 60px;
+    background-color: transparent;
+    border: 2px solid rgb(32, 181, 49);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+}
+.searchBtn{
+    /* margin: 0px 10px; */
+    width: 80px;
+    height: 30px;
+}
+
+.searchBox{
+    height: 26px;
+    width: 210px;
 }
