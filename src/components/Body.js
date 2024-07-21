@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import ResCard from "./ResCard";
-import restaurants from "./RestaurantCardsData";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
-    const [resList, setResList] = useState(restaurants)
+    const [resList, setResList] = useState([])
     useEffect(() => {
         fetchData()
     }, []);
@@ -14,9 +14,12 @@ const Body = () => {
         const json = await data.json();
 
         console.log(json);
-        setResList(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+        setResList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     };
 
+    if(resList.length === 0){
+        return <Shimmer/>
+    }
 
     return (
         <div className="body">
