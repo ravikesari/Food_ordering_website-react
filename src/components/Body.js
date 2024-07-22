@@ -5,8 +5,8 @@ import { dataPath } from "../utiles/utiles";
 
 const Body = () => {
     const [resList, setResList] = useState([]);
-    const [filterResList,setFilterResList] = useState([]);
-    const [searchText,setSearchText] = useState("");
+    const [filterResList, setFilterResList] = useState([]);
+    const [searchText, setSearchText] = useState("");
 
     useEffect(() => {
         fetchData()
@@ -30,19 +30,19 @@ const Body = () => {
             <div className="filter">
 
                 <div className="search">
-                    <input placeholder="Search" type="Text" className="searchBox" value={searchText} 
+                    <input placeholder="Search" type="Text" className="searchBox" value={searchText}
                         onChange={(e) => {
                             setSearchText(e.target.value);
                         }}
                     />
 
-                    <button className="searchBtn" 
-                    onClick={() => {
-                        const filterList = resList.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                    <button className="searchBtn"
+                        onClick={() => {
+                            const filterList = resList.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
 
-                        setFilterResList(filterList)
+                            setFilterResList(filterList)
 
-                    }}>Search</button>
+                        }}>Search</button>
                 </div>
 
                 <div>
