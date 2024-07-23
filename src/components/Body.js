@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ResCard from "./ResCard";
 import Shimmer from "./Shimmer";
-import { dataPath } from "../utiles/utiles";
+import { Link } from "react-router-dom";
 
 const Body = () => {
     const [resList, setResList] = useState([]);
@@ -38,7 +38,8 @@ const Body = () => {
 
                     <button className="searchBtn"
                         onClick={() => {
-                            const filterList = resList.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                            const filterList = resList.filter((res) =>
+                                res.info.name.toLowerCase().includes(searchText.toLowerCase()));
 
                             setFilterResList(filterList)
 
@@ -64,7 +65,10 @@ const Body = () => {
             <div className="resContainer">
                 {
                     filterResList.map((restaurant) => (
-                        <ResCard key={restaurant?.info.id} resData={restaurant} />
+                        <Link className="reslink" to={"/restaurant/" + restaurant?.info?.id}
+                            key={restaurant?.info?.id} >
+                            <ResCard resData={restaurant} />
+                        </Link>
                     ))
                 }
             </div>

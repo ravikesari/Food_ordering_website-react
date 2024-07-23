@@ -33,11 +33,15 @@
     padding: 20px 50px;
 }
 .resCard{
-    /* height: auto; */
+    height: 500px;
     width: 240px;
     margin: 10px;
     background-color: #f0f0f0;
     padding: 10px;
+}
+.reslink{
+    text-decoration: none;
+    color: black;
 }
 .resCard:hover{
     transform: scale(1.02);
@@ -105,4 +109,24 @@
 .searchBox{
     height: 26px;
     width: 210px;
+}
+
+.res-items-menu{
+    padding: 0px 25%;
+    min-width: 550px;
+}
+
+.menu_title{
+    text-align: center;
+}
+
+.res-items-menu > div > div > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
 }
