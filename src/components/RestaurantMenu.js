@@ -1,25 +1,13 @@
-import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { RES_MENU_API } from "../utiles/utiles";
 import { ITEM_IMG_URL } from "../utiles/utiles";
+import useRestaurantMenu from "../utiles/useRestaurantMenu";
 
 const RestaurantMenu = () => {
 
-    const [resInfo, setResInfo] = useState(null);
     const { resId } = useParams();
 
-    useEffect(() => {
-        fetchMenuData();
-    }, []);
-
-    const fetchMenuData = async () => {
-        const menuData = await fetch(RES_MENU_API + resId);
-
-        const json = await menuData.json();
-
-        setResInfo(json.data);
-    };
+    const resInfo = useRestaurantMenu(resId);
 
     if (resInfo === null) return <Shimmer />;
 
@@ -41,7 +29,6 @@ const RestaurantMenu = () => {
                         <div className="menu" key={item.card.info.id}>
                             <hr />
                             <div>
-                                
                                 <div>
                                     <h3>{item.card.info.name}</h3>
                                     <h4>Rs.{Math.round(item?.card?.info?.price / 100) || 320}</h4>
@@ -49,8 +36,6 @@ const RestaurantMenu = () => {
                                 </div>
                                 <img alt={item.card.info.name} className="item_img" src={ITEM_IMG_URL + item.card.info.imageId} />
                             </div>
-
-
                         </div>
                     ))
                 }

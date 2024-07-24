@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ResCard from "./ResCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utiles/useOnlineStatus";
 
 const Body = () => {
     const [resList, setResList] = useState([]);
@@ -23,7 +24,16 @@ const Body = () => {
         console.log(json)
     };
 
+    const onlineStatus = useOnlineStatus();
 
+    if (onlineStatus === false) {
+        return (
+            <div>
+                Your are offline!
+            </div>
+        );
+    }
+    
 
     return resList.length === 0 ? (<Shimmer />) : (
         <div className="body">
