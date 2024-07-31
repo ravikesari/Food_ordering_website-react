@@ -1,4 +1,4 @@
-.header{
+/* .header{
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid black;
@@ -101,7 +101,6 @@
     align-items: center;
 }
 .searchBtn{
-    /* margin: 0px 10px; */
     width: 80px;
     height: 30px;
 }
@@ -109,24 +108,9 @@
 .searchBox{
     height: 26px;
     width: 210px;
-}
+} */
 
-.res-items-menu{
-    padding: 0px 25%;
-    min-width: 550px;
-}
 
-.menu_title{
-    text-align: center;
-}
-
-.res-items-menu > div > div > div{
-    display: flex;
-    justify-content: space-between;
-}
-
-.item_img{
-    width: 150px;
-    height: 150px;
-    border-radius: 12px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

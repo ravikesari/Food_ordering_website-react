@@ -72,12 +72,12 @@ const Body = () => {
                     </button>
                 </div>
             </div>
-            <div className="resContainer">
+            <div className="flex flex-wrap px-20  justify-around">
                 {
                     filterResList.map((restaurant) => (
                         <Link className="reslink" to={"/restaurant/" + restaurant?.info?.id}
                             key={restaurant?.info?.id} >
-                            <ResCard resData={restaurant} />
+                            <ResCard {...restaurant} />
                         </Link>
                     ))
                 }
