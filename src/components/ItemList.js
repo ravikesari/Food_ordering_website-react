@@ -8,7 +8,9 @@ const ItemList = ({ items }) => {
                     <div className="flex justify-between mb-7 pb-2" key={item.card.info.id}>
                         <div className="w-8/12">
                             <span className=" font-semibold text-lg">{item.card.info.name}</span>
-                            <span className="block font-semibold text-base">Rs.{Math.round(item.card.info.price / 100)}</span>
+                            <span className="block font-semibold text-base">
+                                Rs.{Math.round(item.card.info.price / 100) || 220}
+                                </span>
                             <p className="text-sm mt-3">{item.card.info.description}</p>
                         </div>
                         <div className="w-3/12 h-32" >

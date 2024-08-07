@@ -37,16 +37,16 @@ const Body = () => {
 
     return resList.length === 0 ? (<Shimmer />) : (
         <div className="body">
-            <div className="filter">
+            <div className="flex px-24 py-6 justify-between">
 
-                <div className="search">
-                    <input placeholder="Search" type="Text" className="searchBox" value={searchText}
+                <div className="">
+                    <input placeholder="Search" type="Text" className="ring-gray-200 ring-1 ring-inset rounded-md mr-2 py-1 placeholder:pl-2" value={searchText}
                         onChange={(e) => {
                             setSearchText(e.target.value);
                         }}
                     />
 
-                    <button className="searchBtn"
+                    <button className="bg-orange-300 px-4 py-1 rounded-lg"
                         onClick={() => {
                             const filterList = resList.filter((res) =>
                                 res.info.name.toLowerCase().includes(searchText.toLowerCase()));
@@ -57,14 +57,14 @@ const Body = () => {
                 </div>
 
                 <div>
-                    <button className="filter-btn"
+                    <button className="bg-orange-300 px-4 py-1 rounded-lg mr-2"
                         onClick={() => {
                             setFilterResList(resList.filter((res) => res.info.avgRating > 4.2))
                         }}>
                         Top Rated restaurants
                     </button>
 
-                    <button className="filter-btn"
+                    <button className="bg-orange-300 px-4 py-1 rounded-lg"
                         onClick={() => {
                             setFilterResList(resList.filter((res) => res.info.veg == 1))
                         }}>
@@ -72,7 +72,7 @@ const Body = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-wrap px-20  justify-around">
+            <div className="flex flex-wrap px-24  justify-between">
                 {
                     filterResList.map((restaurant) => (
                         <Link className="reslink" to={"/restaurant/" + restaurant?.info?.id}
