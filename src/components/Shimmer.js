@@ -1,20 +1,26 @@
 const Shimmer = () => {
-    return <div className="shimmer-container">
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
-        <div className="shimmer_card"></div>
+    
+    return <div className="flex flex-wrap px-9 justify-evenly">
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
+        <div className="h-72 w-60 bg-gray-100 rounded-xl m-4"></div>
     </div>
 }
 

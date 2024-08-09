@@ -35,7 +35,7 @@ const Body = () => {
     }
     
 
-    return resList.length === 0 ? (<Shimmer />) : (
+    return resList.length === 0 ? (<Shimmer/>) : (
         <div className="body">
             <div className="flex px-24 py-6 justify-between">
 
